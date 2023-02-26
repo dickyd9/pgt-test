@@ -12,6 +12,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'ContentMain'
+}
+</script>
+
 <style scoped>
 .content-wrapper {
   display: flex;
