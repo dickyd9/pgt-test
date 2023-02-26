@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'Card Content',
+  name: 'CardContent',
   props: {
     dataModal: Object,
     date: String,

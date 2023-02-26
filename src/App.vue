@@ -1,13 +1,13 @@
 <template>
   <main>
     <!-- header -->
-    <Header />
+    <header-main />
 
     <!-- content blog -->
-    <Content>
+    <content-main>
       <template #center>
         <div v-for="(item, index) in getBlog" :key="index">
-          <CardContent
+          <single-content-main
             @editContent="editContent(item.id)"
             @deleteContent="deleteContent"
             :dataModal="item"
@@ -21,9 +21,9 @@
 
       <!-- option search, filter, add blog -->
       <template #right>
-        <Filter @addBlog="modal.add = true" />
+        <right-content-main @addBlog="modal.add = true" />
       </template>
-    </Content>
+    </content-main>
 
     <!-- modal add -->
     <modal v-if="modal.add" @closeModal="modal.add = false" @simpanData="saveData" />
@@ -40,14 +40,9 @@
 </template>
 
 <script>
-import Content from './components/Content.vue'
-import CardContent from './components/CardContent.vue'
-import Header from './components/Header.vue'
-import Filter from './components/partials/RightAction.vue'
 import { useStore } from 'vuex'
 
 export default {
-  components: { Content, CardContent, Header, Filter },
   data() {
     const store = useStore()
 

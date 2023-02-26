@@ -53,7 +53,7 @@
 <script>
 import { useStore } from 'vuex'
 export default {
-  name: 'Modal',
+  name: 'ModalForm',
   props: {
     add: Boolean,
     dataEdit: String
